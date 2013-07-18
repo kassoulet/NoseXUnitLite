@@ -1,17 +1,7 @@
 #-*- coding: utf-8 -*-
 import os, sys
 import distutils.util
-
-sys.path.append(os.path.dirname(__file__))
-
-if sys.version_info[0] > 2 or (sys.version_info[0] == 2 and sys.version_info[1] >= 5):
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup
-else:
-    import warnings
-    warnings.warn('setuptools not used')
-    from distutils.core import setup
+from setuptools import setup
 
 execfile(distutils.util.convert_path('nosexunitlite/__init__.py'))
 
