@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
-import sys
+import os, sys
 import distutils.util
+
+sys.path.append(os.path.dirname(__file__))
 
 if sys.version_info[0] > 2 or (sys.version_info[0] == 2 and sys.version_info[1] >= 5):
     from ez_setup import use_setuptools
